@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Speed - NeoWaveCode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg-overlay"></div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="neon-yellow">BUBBLE</span> <span class="neon-blue">SPEED</span>
+            </div>
+            
+            <div class="nav-right">
+                <select id="language-selector" onchange="changeLanguage(this.value)">
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                    <option value="it">🇮🇹 Italiano</option>
+                    <option value="pt">🇵🇹 Português</option>
+                    <option value="ru">🇷🇺 Русский</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                    <option value="zh">🇨🇳 中文</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="ar">🇸🇦 العربية</option>
+                    <option value="hi">🇮🇳 हिन्दी</option>
+                    <option value="tr">🇹🇷 Türkçe</option>
+                    <option value="nl">🇳🇱 Nederlands</option>
+                    <option value="pl">🇵🇱 Polski</option>
+                    <option value="sv">🇸🇪 Svenska</option>
+                    <option value="id">🇮🇩 Indonesia</option>
+                    <option value="vi">🇻🇳 Tiếng Việt</option>
+                    <option value="th">🇹🇭 ไทย</option>
+                    <option value="el">🇬🇷 Ελληνικά</option>
+                </select>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="heroTitle">VELOCIDAD <br><span class="neon-blue">IMPOSIBLE</span></h1>
+            <p data-i18n="heroDesc">Explota burbujas, sube de nivel y conquista el Top 100 Mundial. ¿Tienes los reflejos necesarios?</p>
+            
+            <div class="cta-buttons" id="download">
+                <a href="#" class="store-button android">
+                    <span data-i18n="availableOn">Disponible en</span>
+                    <strong>Google Play</strong>
+                </a>
+                <a href="#" class="store-button ios">
+                    <span data-i18n="getItOn">Consíguelo en</span>
+                    <strong>App Store</strong>
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-image">
+            <div class="hero-image">
+            <div class="phone-mockup">
+                <video class="video-screen" autoplay muted loop playsinline>
+                    <source src="gameplay.mp4" type="video/mp4">
+                    Tu navegador no soporta video.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 data-i18n="featuresTitle">CARACTERÍSTICAS</h2>
+        <div class="feature-grid">
+            <div class="card">
+                <h3 data-i18n="feat1Title">🏆 Ranking Top 100</h3>
+                <p data-i18n="feat1Desc">Compite contra el mundo entero. Solo los 100 mejores aparecen en la lista.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="feat2Title">⚡ Habilidad Pura</h3>
+                <p data-i18n="feat2Desc">Sin 'Pay to Win'. Solo tus reflejos determinan tu puntuación.</p>
+            </div>
+            <div class="card">
+                <h3 data-i18n="feat3Title">👾 Crea tu Avatar</h3>
+                <p data-i18n="feat3Desc">Personaliza tu personaje animado y destaca en la clasificación.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="privacy.html" data-i18n="privacy">Política de Privacidad</a>
+            <a href="terms.html" data-i18n="terms">Términos y Condiciones</a>
+            <a href="support.html" data-i18n="contact">Contacto</a>
+        </div>
+        <p>&copy; 2025 NeoWaveCode. Bubble Speed.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            es: {
+                heroTitle: "VELOCIDAD <br><span class='neon-blue'>IMPOSIBLE</span>", heroDesc: "Explota burbujas, sube de nivel y conquista el Top 100 Mundial.", availableOn: "Disponible en", getItOn: "Consíguelo en", featuresTitle: "CARACTERÍSTICAS", feat1Title: "🏆 Ranking Top 100", feat1Desc: "Solo los 100 mejores aparecen en la lista.", feat2Title: "⚡ Habilidad Pura", feat2Desc: "Solo tus reflejos determinan tu puntuación.", feat3Title: "👾 Crea tu Avatar", feat3Desc: "Personaliza tu personaje animado.", privacy: "Política de Privacidad", terms: "Términos y Condiciones", contact: "Contacto"
+            },
+            en: {
+                heroTitle: "IMPOSSIBLE <br><span class='neon-blue'>SPEED</span>", heroDesc: "Pop bubbles, level up and conquer the World Top 100.", availableOn: "Available on", getItOn: "Get it on", featuresTitle: "FEATURES", feat1Title: "🏆 Top 100 Ranking", feat1Desc: "Only the best 100 appear on the list.", feat2Title: "⚡ Pure Skill", feat2Desc: "Only your reflexes determine your score.", feat3Title: "👾 Create Avatar", feat3Desc: "Customize your animated character.", privacy: "Privacy Policy", terms: "Terms & Conditions", contact: "Contact"
+            },
+            fr: {
+                heroTitle: "VITESSE <br><span class='neon-blue'>IMPOSSIBLE</span>", heroDesc: "Éclatez des bulles et conquérez le Top 100 mondial.", availableOn: "Disponible sur", getItOn: "Télécharger sur", featuresTitle: "FONCTIONNALITÉS", feat1Title: "🏆 Classement Top 100", feat1Desc: "Seuls les 100 meilleurs apparaissent.", feat2Title: "⚡ Compétence Pure", feat2Desc: "Seuls vos réflexes comptent.", feat3Title: "👾 Créer un Avatar", feat3Desc: "Personnalisez votre personnage.", privacy: "Politique de Confidentialité", terms: "Conditions Générales", contact: "Contact"
+            },
+            de: {
+                heroTitle: "UNMÖGLICHE <br><span class='neon-blue'>GESCHWINDIGKEIT</span>", heroDesc: "Lass Blasen platzen und erobere die Welt Top 100.", availableOn: "Verfügbar bei", getItOn: "Laden im", featuresTitle: "EIGENSCHAFTEN", feat1Title: "🏆 Top 100 Ranking", feat1Desc: "Nur die besten 100 erscheinen auf der Liste.", feat2Title: "⚡ Reines Können", feat2Desc: "Nur deine Reflexe bestimmen deine Punktzahl.", feat3Title: "👾 Avatar Erstellen", feat3Desc: "Personalisiere deinen animierten Charakter.", privacy: "Datenschutz", terms: "AGB", contact: "Kontakt"
+            },
+            it: {
+                heroTitle: "VELOCITÀ <br><span class='neon-blue'>IMPOSSIBILE</span>", heroDesc: "Scoppia bolle, sali di livello e conquista la Top 100 mondiale.", availableOn: "Disponibile su", getItOn: "Scarica su", featuresTitle: "CARATTERISTICHE", feat1Title: "🏆 Classifica Top 100", feat1Desc: "Solo i migliori 100 appaiono nella lista.", feat2Title: "⚡ Pura Abilità", feat2Desc: "Solo i tuoi riflessi determinano il punteggio.", feat3Title: "👾 Crea Avatar", feat3Desc: "Personalizza il tuo personaggio animato.", privacy: "Privacy", terms: "Termini", contact: "Contatto"
+            },
+            pt: {
+                heroTitle: "VELOCIDADE <br><span class='neon-blue'>IMPOSSÍVEL</span>", heroDesc: "Estoure bolhas, suba de nível e conquiste o Top 100 Mundial.", availableOn: "Disponível no", getItOn: "Baixar no", featuresTitle: "RECURSOS", feat1Title: "🏆 Ranking Top 100", feat1Desc: "Apenas os 100 melhores aparecem na lista.", feat2Title: "⚡ Habilidade Pura", feat2Desc: "Apenas seus reflexos contam.", feat3Title: "👾 Criar Avatar", feat3Desc: "Personalize seu personagem animado.", privacy: "Privacidade", terms: "Termos", contact: "Contato"
+            },
+            ru: {
+                heroTitle: "НЕВОЗМОЖНАЯ <br><span class='neon-blue'>СКОРОСТЬ</span>", heroDesc: "Лопай пузыри и покори мировой Топ-100.", availableOn: "Доступно в", getItOn: "Загрузить в", featuresTitle: "ОСОБЕННОСТИ", feat1Title: "🏆 Топ-100 Рейтинг", feat1Desc: "Только 100 лучших в списке.", feat2Title: "⚡ Чистый Навык", feat2Desc: "Только твои рефлексы решают.", feat3Title: "👾 Создать Аватар", feat3Desc: "Настрой своего персонажа.", privacy: "Конфиденциальность", terms: "Условия", contact: "Контакты"
+            },
+            ja: {
+                heroTitle: "不可能な <br><span class='neon-blue'>スピード</span>", heroDesc: "バブルを割り、レベルを上げ、世界のトップ100を征服せよ。", availableOn: "で利用可能", getItOn: "で入手", featuresTitle: "特徴", feat1Title: "🏆 トップ100ランキング", feat1Desc: "ベスト100のみがリストに表示されます。", feat2Title: "⚡ 純粋なスキル", feat2Desc: "反射神経のみがスコアを決定します。", feat3Title: "👾 アバター作成", feat3Desc: "アニメキャラクターをカスタマイズ。", privacy: "プライバシー", terms: "利用規約", contact: "お問い合わせ"
+            },
+            zh: {
+                heroTitle: "不可能的 <br><span class='neon-blue'>速度</span>", heroDesc: "戳破泡泡，升级并征服世界前100名。", availableOn: "可用於", getItOn: "獲取於", featuresTitle: "特徵", feat1Title: "🏆 前100名排名", feat1Desc: "僅限前100名出現在列表中。", feat2Title: "⚡ 純粹的技巧", feat2Desc: "僅限您的反應決定分數。", feat3Title: "👾 創建頭像", feat3Desc: "自定義您的動畫角色。", privacy: "隱私", terms: "條款", contact: "聯繫"
+            },
+            ko: {
+                heroTitle: "불가능한 <br><span class='neon-blue'>속도</span>", heroDesc: "버블을 터뜨리고 레벨을 올리고 세계 상위 100위를 정복하세요.", availableOn: "사용 가능", getItOn: "다운로드", featuresTitle: "특징", feat1Title: "🏆 탑 100 랭킹", feat1Desc: "상위 100명만 목록에 표시됩니다.", feat2Title: "⚡ 순수한 실력", feat2Desc: "오직 당신의 반사신경만이 점수를 결정합니다.", feat3Title: "👾 아바타 만들기", feat3Desc: "나만의 캐릭터를 꾸미세요.", privacy: "개인정보처리방침", terms: "이용약관", contact: "연락처"
+            },
+            ar: {
+                heroTitle: "السرعة <br><span class='neon-blue'>المستحيلة</span>", heroDesc: "فجر الفقاعات واغزُ قائمة أفضل 100 في العالم.", availableOn: "متاح على", getItOn: "احصل عليه من", featuresTitle: "الميزات", feat1Title: "🏆 تصنيف أفضل 100", feat1Desc: "يظهر فقط أفضل 100 في القائمة.", feat2Title: "⚡ مهارة خالصة", feat2Desc: "فقط ردود أفعالك تحدد نتيجتك.", feat3Title: "👾 إنشاء أفاتار", feat3Desc: "قم بتخصيص شخصيتك المتحركة.", privacy: "الخصوصية", terms: "الشروط", contact: "اتصل"
+            },
+            hi: {
+                heroTitle: "असंभव <br><span class='neon-blue'>गति</span>", heroDesc: "बुलबुले फोड़ें और विश्व के शीर्ष 100 को जीतें।", availableOn: "पर उपलब्ध", getItOn: "यहाँ प्राप्त करें", featuresTitle: "विशेषताएं", feat1Title: "🏆 शीर्ष 100 रैंकिंग", feat1Desc: "सूची में केवल सर्वश्रेष्ठ 100 दिखाई देते हैं।", feat2Title: "⚡ शुद्ध कौशल", feat2Desc: "केवल आपकी सजगता ही आपका स्कोर तय करती है।", feat3Title: "👾 अवतार बनाएँ", feat3Desc: "अपने एनिमेटेड चरित्र को अनुकूलित करें।", privacy: "गोपनीयता", terms: "शर्तें", contact: "संपर्क"
+            },
+            tr: {
+                heroTitle: "İMKANSIZ <br><span class='neon-blue'>HIZ</span>", heroDesc: "Baloncukları patlat, seviye atla ve Dünya İlk 100'ü fethet.", availableOn: "Mevcut", getItOn: "İndir", featuresTitle: "ÖZELLİKLER", feat1Title: "🏆 İlk 100 Sıralama", feat1Desc: "Listede sadece en iyi 100 kişi görünür.", feat2Title: "⚡ Saf Yetenek", feat2Desc: "Puanını sadece reflekslerin belirler.", feat3Title: "👾 Avatar Oluştur", feat3Desc: "Karakterini kişiselleştir.", privacy: "Gizlilik", terms: "Şartlar", contact: "İletişim"
+            },
+            nl: {
+                heroTitle: "ONMOGELIJKE <br><span class='neon-blue'>SNELHEID</span>", heroDesc: "Laat bubbels knappen en verover de Wereld Top 100.", availableOn: "Beschikbaar op", getItOn: "Download in", featuresTitle: "KENMERKEN", feat1Title: "🏆 Top 100 Ranking", feat1Desc: "Alleen de beste 100 verschijnen.", feat2Title: "⚡ Pure Vaardigheid", feat2Desc: "Alleen je reflexen bepalen je score.", feat3Title: "👾 Maak Avatar", feat3Desc: "Pas je personage aan.", privacy: "Privacy", terms: "Voorwaarden", contact: "Contact"
+            },
+            pl: {
+                heroTitle: "NIEMOŻLIWA <br><span class='neon-blue'>PRĘDKOŚĆ</span>", heroDesc: "Przebijaj bańki i podbij światowy ranking Top 100.", availableOn: "Dostępne w", getItOn: "Pobierz z", featuresTitle: "CECHY", feat1Title: "🏆 Ranking Top 100", feat1Desc: "Tylko 100 najlepszych graczy.", feat2Title: "⚡ Czyste Umiejętności", feat2Desc: "Liczy się tylko refleks.", feat3Title: "👾 Stwórz Awatara", feat3Desc: "Spersonalizuj swoją postać.", privacy: "Prywatność", terms: "Warunki", contact: "Kontakt"
+            },
+            sv: {
+                heroTitle: "OMÖJLIG <br><span class='neon-blue'>HASTIGHET</span>", heroDesc: "Spräck bubblor och erövra Världens Topp 100.", availableOn: "Finns på", getItOn: "Hämta i", featuresTitle: "FUNKTIONER", feat1Title: "🏆 Topp 100 Ranking", feat1Desc: "Endast de 100 bästa syns.", feat2Title: "⚡ Ren Skicklighet", feat2Desc: "Endast dina reflexer avgör.", feat3Title: "👾 Skapa Avatar", feat3Desc: "Anpassa din karaktär.", privacy: "Integritet", terms: "Villkor", contact: "Kontakt"
+            },
+            id: {
+                heroTitle: "KECEPATAN <br><span class='neon-blue'>MUSTAHIL</span>", heroDesc: "Pecahkan gelembung dan taklukkan 100 Besar Dunia.", availableOn: "Tersedia di", getItOn: "Dapatkan di", featuresTitle: "FITUR", feat1Title: "🏆 Peringkat 100 Besar", feat1Desc: "Hanya 100 terbaik yang muncul.", feat2Title: "⚡ Keahlian Murni", feat2Desc: "Hanya refleksmu yang menentukan.", feat3Title: "👾 Buat Avatar", feat3Desc: "Sesuaikan karakter animasimu.", privacy: "Privasi", terms: "Syarat", contact: "Kontak"
+            },
+            vi: {
+                heroTitle: "TỐC ĐỘ <br><span class='neon-blue'>KHÔNG TƯỞNG</span>", heroDesc: "Làm nổ bong bóng và chinh phục Top 100 Thế giới.", availableOn: "Có sẵn trên", getItOn: "Tải xuống tại", featuresTitle: "TÍNH NĂNG", feat1Title: "🏆 Xếp hạng Top 100", feat1Desc: "Chỉ 100 người giỏi nhất xuất hiện.", feat2Title: "⚡ Kỹ năng thuần túy", feat2Desc: "Chỉ phản xạ của bạn quyết định điểm số.", feat3Title: "👾 Tạo Avatar", feat3Desc: "Tùy chỉnh nhân vật của bạn.", privacy: "Riêng tư", terms: "Điều khoản", contact: "Liên hệ"
+            },
+            th: {
+                heroTitle: "ความเร็ว <br><span class='neon-blue'>ที่เป็นไปไม่ได้</span>", heroDesc: "ทำลายฟองสบู่และพิชิต 100 อันดับแรกของโลก", availableOn: "ใช้ได้บน", getItOn: "ดาวน์โหลดที่", featuresTitle: "คุณสมบัติ", feat1Title: "🏆 อันดับ Top 100", feat1Desc: "เฉพาะ 100 คนที่ดีที่สุดเท่านั้น", feat2Title: "⚡ ทักษะล้วนๆ", feat2Desc: "ปฏิกิริยาของคุณกำหนดคะแนน", feat3Title: "👾 สร้างอวาตาร์", feat3Desc: "ปรับแต่งตัวละครของคุณ", privacy: "ความเป็นส่วนตัว", terms: "เงื่อนไข", contact: "ติดต่อ"
+            },
+            el: {
+                heroTitle: "ΑΔΥΝΑΤΗ <br><span class='neon-blue'>ΤΑΧΥΤΗΤΑ</span>", heroDesc: "Σπάστε φυσαλίδες και κατακτήστε το Παγκόσμιο Top 100.", availableOn: "Διαθέσιμο στο", getItOn: "Αποκτήστε το στο", featuresTitle: "ΧΑΡΑΚΤΗΡΙΣΤΙΚΑ", feat1Title: "🏆 Κατάταξη Top 100", feat1Desc: "Μόνο οι 100 καλύτεροι εμφανίζονται.", feat2Title: "⚡ Καθαρή Δεξιότητα", feat2Desc: "Μόνο τα αντανακλαστικά σας μετράνε.", feat3Title: "👾 Δημιουργία Avatar", feat3Desc: "Προσαρμόστε τον χαρακτήρα σας.", privacy: "Απόρρητο", terms: "Όροι", contact: "Επικοινωνία"
+            }
+        };
+
+        function changeLanguage(lang) {
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+
+        const userLang = navigator.language || navigator.userLanguage;
+        const langCode = userLang.split('-')[0];
+        if (translations[langCode]) {
+            document.getElementById('language-selector').value = langCode;
+            changeLanguage(langCode);
+        } else {
+            changeLanguage('en');
+        }
+    </script>
+</body>
+</html>

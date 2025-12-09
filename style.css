@@ -1,0 +1,168 @@
+:root {
+    --bg-color: #050a14;
+    --neon-blue: #00f3ff;
+    --neon-yellow: #ffe600; 
+    --text-color: #ffffff;
+    --card-bg: #0f172a;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .logo, .btn-nav, .store-button strong {
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Efectos de Texto Neón */
+.neon-blue { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+.neon-yellow { color: var(--neon-yellow); text-shadow: 0 0 10px var(--neon-yellow); }
+
+/* HEADER - LOGO IZQUIERDA / SELECTOR DERECHA */
+header {
+    width: 100%;
+    box-sizing: border-box; /* Importante para que el padding no rompa el ancho */
+    padding: 20px 50px;
+    border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+    position: relative;
+    z-index: 10;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Esto empuja los elementos a los extremos */
+    align-items: center;
+    width: 100%;
+}
+
+.logo { 
+    font-size: 1.8rem; 
+    font-weight: bold; 
+    letter-spacing: 2px;
+    /* Aseguramos que el logo no se encoja */
+    flex-shrink: 0;
+}
+
+.nav-right { 
+    display: flex; 
+    align-items: center; 
+    /* Aseguramos que el selector no se encoja */
+    flex-shrink: 0;
+}
+
+/* Selector de Idioma */
+#language-selector {
+    background: #000;
+    color: white;
+    border: 1px solid var(--neon-blue);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    outline: none;
+}
+#language-selector:hover {
+    box-shadow: 0 0 10px var(--neon-blue);
+}
+
+/* Botón directo de soporte (estilos para el footer o páginas internas) */
+.btn-nav {
+    text-decoration: none;
+    background: var(--neon-blue);
+    color: #000;
+    padding: 8px 20px;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+.btn-nav:hover { background: white; box-shadow: 0 0 15px white; }
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 80px 50px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.hero-content h1 { font-size: 3.5rem; line-height: 1.1; margin-bottom: 20px; }
+.hero-content p { font-size: 1.2rem; color: #ccc; max-width: 500px; margin-bottom: 30px; }
+
+.cta-buttons { display: flex; gap: 15px; }
+
+.store-button {
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: 1px solid var(--neon-blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: 0.3s;
+    background: rgba(0, 243, 255, 0.05);
+}
+.store-button span { font-size: 0.7rem; }
+.store-button strong { font-size: 1.2rem; }
+
+.store-button:hover { background: var(--neon-blue); color: black; box-shadow: 0 0 20px var(--neon-blue); }
+
+/* Placeholder Móvil */
+.phone-mockup {
+    width: 260px;
+    height: 520px;
+    border: 4px solid var(--neon-yellow); 
+    border-radius: 30px;
+    /* Importante: overflow hidden para que el video no se salga de las curvas */
+    overflow: hidden; 
+    position: relative;
+    box-shadow: 0 0 30px rgba(255, 230, 0, 0.2);
+    background: #000;
+    margin-top: 20px;
+}
+
+/* Nueva clase para el video */
+.video-screen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto hace que el video llene todo el hueco sin deformarse */
+    border-radius: 26px; /* Un poco menos que el borde exterior para que encaje bien */
+    display: block;
+}
+
+/* Features */
+.features { text-align: center; padding: 60px 20px; background: #080f1f; }
+.features h2 { margin-bottom: 40px; color: var(--neon-yellow); }
+
+.feature-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+
+.card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+}
+.card:hover { transform: translateY(-10px); border-color: var(--neon-blue); }
+
+/* Footer */
+footer { text-align: center; padding: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 0.9rem; }
+.footer-links { margin-bottom: 20px; }
+.footer-links a { color: #888; margin: 0 10px; text-decoration: none; }
+.footer-links a:hover { color: var(--neon-blue); }
+
+/* Responsive móvil */
+@media (max-width: 768px) {
+    header { padding: 15px 20px; }
+    .hero { text-align: center; justify-content: center; padding: 40px 20px; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .cta-buttons { justify-content: center; }
+}
